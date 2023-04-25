@@ -28,6 +28,7 @@ docker-compose up -d
 6. Llenar las variables de entorno definidias en el .env
 
 7. Ejecutar la app
+
 ```
 npm run start:dev
 ```
@@ -42,3 +43,20 @@ localhost:3000/api/v3/seed
 
 - MongoDB
 - NestJs
+
+# Production build
+
+1. Crear archivo `env.prod`
+2. llenar variables de entorno de produccion
+3. Crear la nueva imagen
+
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+
+
+4. Otros comandos de docker que puedes usar
+
+```
+ docker-compose -f docker-compose.prod.yaml --env-file .env.prod up -d 
+```
